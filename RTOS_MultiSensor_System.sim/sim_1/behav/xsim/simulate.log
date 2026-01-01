@@ -1,0 +1,20 @@
+Time resolution is 1 ps
+
+
+================================================================================
+  REAL-TIME MULTI-SENSOR CONTROL SYSTEM - SIMULATION
+  Master's Degree Project
+================================================================================
+
+
+[0 ns] TEST: Applying system reset...
+[200000 ns] TEST: Reset released, system active
+
+================================================================================
+TEST 1: Normal Operating Conditions
+================================================================================
+Sensor Values:
+  Temperature: 25°C
+  Pressure: 100 kPa
+  Proximity: 30 cm
+

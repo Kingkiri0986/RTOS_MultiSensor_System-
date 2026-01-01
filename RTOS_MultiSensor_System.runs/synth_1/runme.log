@@ -1,0 +1,64 @@
+
+*** Running vivado
+    with args -log rtos_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rtos_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Dec 26 00:03:34 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source rtos_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:26 . Memory (MB): peak = 608.066 ; gain = 220.922
+Command: synth_design -top rtos_top -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3436
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1383.961 ; gain = 541.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rtos_top' [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:18]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_top' (0#1) [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:18]
+WARNING: [Synth 8-6014] Unused sequential element task_ready_reg was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:197]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[0] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[1] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[2] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[3] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[4] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[5] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[6] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element task_priority_reg[7] was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:203]
+WARNING: [Synth 8-6014] Unused sequential element all_sensors_processed_reg was removed.  [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:419]
+WARNING: [Synth 8-4767] Trying to implement RAM 'task_queue_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons. [C:/Users/param/.Xilinx/RTOS_MultiSensor_System/RTOS_MultiSensor_System.srcs/sources_1/new/rtos_top.v:232]
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+	2: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	3: Invalid write to RAM. 
+	4: Found multiple writes to the RAM with same address. 
+	5: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	6: Found multiple writes to the RAM with same address. 
+	7: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	8: Invalid write to RAM. 
+	9: Found multiple writes to the RAM with same address. 
+	10: Invalid write to RAM. 
+WARNING: [Synth 8-4557] Cannot dissolve ram 'task_queue_reg' to registers because of more than 1 writes
+ERROR: [Synth 8-2913] Unsupported Dual Port Block-RAM template for task_queue_reg
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1503.461 ; gain = 660.742
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 12 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:14 . Memory (MB): peak = 1503.461 ; gain = 895.395
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 26 00:05:27 2025...
